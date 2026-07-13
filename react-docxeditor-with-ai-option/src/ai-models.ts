@@ -1,11 +1,11 @@
-const API_BASE = "http://localhost:5243/api/document-ai";
+const API_BASE = "http://localhost:62870/api/DocumentEditor";
 
 export async function getAzureChatAIRequest(options: any) {
 
     try {
 
         const response = await fetch(
-            `${API_BASE}/process`,
+            `${API_BASE}/Process`,
             {
                 method: "POST",
 
@@ -23,8 +23,7 @@ export async function getAzureChatAIRequest(options: any) {
         }
 
         const result = await response.json();
-
-        return result.text;
+        return result.Text;
 
     }
     catch (err) {
