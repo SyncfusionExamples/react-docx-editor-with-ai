@@ -25,7 +25,7 @@ Before running the sample, ensure the following software is installed:
 Open the following file:
 
 ```text
-react-docxeditor-with-ai-option/src/index.tsx
+Client-side/src/index.tsx
 ```
 
 Register your Syncfusion license key.
@@ -41,7 +41,7 @@ registerLicense("YOUR LICENSE KEY");
 Open the following file:
 
 ```text
-DOCXEditorAPIServices/src/appsettings.json
+Server-side/src/appsettings.json
 ```
 
 Update the `AzureOpenAI` section with your Azure OpenAI resource information.
@@ -61,14 +61,14 @@ Update the `AzureOpenAI` section with your Azure OpenAI resource information.
 #### React Application
 
 ```bash
-cd react-docxeditor-with-ai-option
+cd cd .\Client-side\
 npm install
 ```
 
 #### ASP.NET Core Web API
 
 ```bash
-cd DOCXEditorAPIServices/src
+cd .\Server-side\src
 dotnet restore
 ```
 
@@ -77,7 +77,7 @@ dotnet restore
 Open a terminal and run:
 
 ```bash
-cd DOCXEditorAPIServices/src
+cd .\Server-side\src
 dotnet run
 ```
 
@@ -94,7 +94,7 @@ Now listening on: http://localhost:62870
 Open the following file:
 
 ```text
-react-docxeditor-with-ai-option/src/ai-models.ts
+Client-side/src/ai-models.ts
 ```
 
 Update the `API_BASE` constant to match the running Web API URL.
@@ -110,7 +110,7 @@ const API_BASE = "http://localhost:62870/api/DocumentEditor";
 Open a new terminal and run:
 
 ```bash
-cd react-docxeditor-with-ai-option
+cd .\Client-side\
 npm start
 ```
 
