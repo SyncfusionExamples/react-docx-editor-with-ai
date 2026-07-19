@@ -130,6 +130,17 @@ The React application will start and open automatically in your default browser.
 - Ensure the React application is configured with the correct Web API URL before running the sample.
 ---
 
+## Demo
+
+<p align="center">
+  <img
+    src="asset/React-DOCX-Editor-AI-Assistance-Demo.gif"
+    alt="React DOCX Editor AI Assistance Demo"
+    width="1000" />
+</p>
+
+---
+
 # Web API Endpoints
 
 The ASP.NET Core Web API exposes a set of REST endpoints that enable the Syncfusion Document Editor to perform server-side document processing operations such as document import/export, spell checking, document protection, mail merge, PDF conversion, and AI-assisted content generation. The following table lists the available endpoints included in this sample.

@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { registerLicense } from '@syncfusion/ej2-base';
-
+import { registerLicense } from "@syncfusion/ej2-base";
 // Registering Syncfusion license key
 registerLicense('Replace your generated license key here');
 

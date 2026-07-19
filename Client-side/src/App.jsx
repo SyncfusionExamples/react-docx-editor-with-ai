@@ -21,7 +21,7 @@ L10n.load({
   }
 });
 
-const SERVICE_URL = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+const SERVICE_URL = 'http://localhost:62870/api/DocumentEditor/';
 const UPLOADER_SAVE_URL = 'https://services.syncfusion.com/react/production/api/FileUploader/Save';
 const UPLOADER_REMOVE_URL = 'https://services.syncfusion.com/react/production/api/FileUploader/Remove';
 
