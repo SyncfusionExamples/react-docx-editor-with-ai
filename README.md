@@ -18,7 +18,7 @@ Before running the sample, ensure the following software is installed:
 - Node.js (LTS version recommended)
 - npm
 - A valid Syncfusion® license key
-- An Azure OpenAI resource with a deployed chat model (for example, GPT-4o or GPT-4.1)
+- An Azure OpenAI resource with a deployed chat model
 
 ### Register the Syncfusion License
 
@@ -123,11 +123,6 @@ The React application will start and open automatically in your default browser.
 3. Choose an AI option such as **Grammar**, **Summarize**, **Rephrase**, or **Translate**.
 4. The request is sent to the ASP.NET Core Web API, which securely communicates with Azure OpenAI and returns the generated content to the editor.
 
-### Notes
-
-- Azure OpenAI credentials are configured only in the ASP.NET Core Web API.
-- The React application communicates with the Web API and does not expose Azure OpenAI credentials to the browser.
-- Ensure the React application is configured with the correct Web API URL before running the sample.
 ---
 
 ## Demo
@@ -143,24 +138,15 @@ The React application will start and open automatically in your default browser.
 
 # Web API Endpoints
 
-The ASP.NET Core Web API exposes a set of REST endpoints that enable the Syncfusion Document Editor to perform server-side document processing operations such as document import/export, spell checking, document protection, mail merge, PDF conversion, and AI-assisted content generation. The following table lists the available endpoints included in this sample.
+The ASP.NET Core Web API exposes a set of REST endpoints that enable the Syncfusion Document Editor to perform server-side document processing operations such as document import/export, spell checking, and AI-assisted content generation. The following table lists the available endpoints included in this sample.
 
 
 | Endpoint                                                     | Method | Description                                                                                                                                                                                                                      |
 | ------------------------------------------------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `/api/DocumentEditor/Process`                                | `POST` | Sends the user prompt to the configured Azure OpenAI deployment and returns the generated HTML/text response. Used for AI-powered document generation, rewriting, summarization, translation, and other prompt-based operations. |
 | `/api/DocumentEditor/SpellCheck`                             | `POST` | Performs spell checking on the supplied text and returns spelling suggestions.                                                                                                                                                   |
-| `/api/DocumentEditor/SpellCheckByPage`                       | `POST` | Performs page-wise spell checking for large documents to improve performance.                                                                                                                                                    |
-| `/api/DocumentEditor/SystemClipboard`                        | `POST` | Imports HTML or RTF content from the system clipboard into the Document Editor.                                                                                                                                                  |
-| `/api/DocumentEditor/Import`                                 | `POST` | Imports supported document formats and converts them into the SFDT format used by the Document Editor.                                                                                                                           |
-| `/api/DocumentEditor/RestrictEditing`                        | `POST` | Applies document protection or restrict editing settings.                                                                                                                                                                        |
-| `/api/DocumentEditor/EnforceProtection`                      | `POST` | Enables document protection using the specified protection type and password.                                                                                                                                                    |
-| `/api/DocumentEditor/UnprotectDocument`                      | `POST` | Removes document protection using the provided password.                                                                                                                                                                         |
-| `/api/DocumentEditor/WordToPdf`                              | `POST` | Converts a Word document into PDF format.                                                                                                                                                                                        |
-| `/api/DocumentEditor/MailMerge`                              | `POST` | Performs mail merge using the supplied template and data source.                                                                                                                                                                 |
-| `/api/DocumentEditor/ImportFormFields`                       | `POST` | Imports form field values into a document.                                                                                                                                                                                       |
-| `/api/DocumentEditor/ExportFormFields`                       | `POST` | Exports all form field values from a document.                                                                                                                                                                                   |
-| `/api/DocumentEditor/ExecuteCustomAction` *(if implemented)* | `POST` | Executes custom server-side document processing logic.                                                                                                                                                                           |
+| `/api/DocumentEditor/SpellCheckByPage`                       | `POST` | Performs page-wise spell checking for large documents to improve performance.                                                                                                                                            |
+| `/api/DocumentEditor/Import`                                 | `POST` | Imports supported document formats and converts them into the SFDT format used by the Document Editor.                                |
 
 
 ---
@@ -227,4 +213,4 @@ Request new feature through [Syncfusion® feedback portal](https://www.syncfusi
 
 # License
 
-This is a commercial product and requires a paid license for possession or use Syncfusion's licensed software, including this component, is subject to the terms and conditions of [Syncfusion's EULA](https://www.syncfusion.com/license/studio/34.1.29/syncfusion_essential_studio_eula.pdf?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples). You can purchase a licnense [here](https://www.syncfusion.com/sales/products?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples) or start a free 30\-day trial [here](https://www.syncfusion.com/account/manage-trials/start-trials?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples). 
+This is a commercial product and requires a paid license for possession or use Syncfusion's licensed software, including this component, is subject to the terms and conditions of [Syncfusion's EULA](https://www.syncfusion.com/license/studio/syncfusion_essential_studio_eula.pdf?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples). You can purchase a licnense [here](https://www.syncfusion.com/sales/products?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples) or start a free 30\-day trial [here](https://www.syncfusion.com/account/manage-trials/start-trials?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples). 
